@@ -16,9 +16,9 @@ HEADERS = $(wildcard $(INCDIR)/*.h)
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-all: clean bitcoin_descriptor_checksum clean_objects
+all: clean groestlcoin_descriptor_checksum clean_objects
 
-bitcoin_descriptor_checksum: $(HEADERS) $(OBJECTS)
+groestlcoin_descriptor_checksum: $(HEADERS) $(OBJECTS)
 	$(CPP) $(CFLAGS) $(OBJECTS) -o $@
 #	$(UPX) $@
 
@@ -27,4 +27,4 @@ clean_objects:
 
 clean:
 	@rm -f $(OBJECTS)
-	@rm -f bitcoin_descriptor_checksum
+	@rm -f groestlcoin_descriptor_checksum
